@@ -424,6 +424,10 @@
       <LastGenOutput>Localization.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Localization.ko-KR.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Localization.resx</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Localization.zh-Hans.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Localization.resx</DependentUpon>
@@ -458,12 +462,15 @@
 mkdir $(TargetDir)Resources\Libraries\zh-Hans
 move /y $(TargetDir)zh-Hans\EdgeTool.resources.dll $(TargetDir)Resources\Libraries\zh-Hans\EdgeTool.resources.dll
 rd /s /q $(TargetDir)zh-Hans
+mkdir $(TargetDir)Resources\Libraries\ko-KR
+move /y $(TargetDir)ko-KR\EdgeTool.resources.dll $(TargetDir)Resources\Libraries\ko-KR\EdgeTool.resources.dll
+rd /s /q $(TargetDir)ko-KR
 move /y $(TargetDir)*.dll $(TargetDir)Resources\Libraries
 move /y $(TargetDir)*.pdb $(TargetDir)Resources\Libraries
 del /f /q $(TargetDir)*.xml
 move /y $(TargetDir)Resources\Libraries\EdgeTool.pdb $(TargetDir)EdgeTool.pdb</PostBuildEvent>
   </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
